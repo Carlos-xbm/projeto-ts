@@ -5,4 +5,4 @@ import { TableController } from './table.controller';
     controllers: [TableController],
     providers: [],
 })
-export class TableModule { }
+export class TableModule {}

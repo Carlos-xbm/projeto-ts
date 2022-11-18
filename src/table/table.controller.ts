@@ -1,9 +1,9 @@
-import { Controller, Get } from "@nestjs/common";
+import { Controller, Get } from '@nestjs/common';
 
 @Controller('table')
 export class TableController {
     @Get()
     findAll() {
-        return 'Buscar todas as mesas'
+        return 'Buscar todas as mesas';
     }
 }
