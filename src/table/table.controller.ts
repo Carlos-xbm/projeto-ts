@@ -46,11 +46,10 @@ export class TableController {
         return this.tableService.create(dto);
     }
 
-    @Put()
+    @Patch(':id')
     @ApiOperation({
         summary: 'Editar uma mesa pelo ID',
     })
-    @Patch('id')
     update(@Param('id') id: string, @Body() dto: UpdateTableDto): Promise<Table> {
         return this.tableService.update(id, dto);
     }
