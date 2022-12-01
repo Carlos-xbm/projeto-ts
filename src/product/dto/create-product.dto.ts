@@ -28,7 +28,7 @@ export class CreateProductDto {
     @IsUrl()
     @ApiProperty({
         description: 'Imagem do produto',
-        example: 'http://www.pizza-de-calabresa-&-mussarela',
+        example: 'http://www.pizzafresh.com/imagem-usuario',
     })
     image: string;
 }

@@ -37,7 +37,7 @@ export class CreateUserDto {
     @IsUrl()
     @ApiProperty({
         description: 'Imagem de usuario',
-        example: 'http://www.pizza-de-calabresa-&-mussarela',
+        example: 'http://www.pizzafresh.com/imagem-usuario',
     })
     image: string;
 }
