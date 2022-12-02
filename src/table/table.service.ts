@@ -29,7 +29,11 @@ export class TableService {
     create(dto: CreateTableDto): Promise<Table> {
         const data: Table = { ...dto };
 
-        return this.prisma.table.create({ data }).catch(this.handleError);
+        return this.prisma.table
+            .create({
+                data,
+            })
+            .catch(this.handleError);
     }
 
     async update(id: string, dto: UpdateTableDto): Promise<Table> {
