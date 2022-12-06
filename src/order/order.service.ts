@@ -21,11 +21,16 @@ export class OrderService {
                 },
             },
             products: {
-                connect: createOrderDto.products.map((productId) => ({
-                    id: productId,
-                })),
+                createMany: {
+                    data: createOrderDto.products.map((createOrderProductDto) => ({
+                        productId: createOrderProductDto.productId,
+                        quantity: createOrderProductDto.quantity,
+                        description: createOrderProductDto.description,
+                    })),
+                },
             },
         };
+
         return this.prisma.order
             .create({
                 data,
@@ -43,7 +48,13 @@ export class OrderService {
                     },
                     products: {
                         select: {
-                            name: true,
+                            quantity: true,
+                            description: true,
+                            products: {
+                                select: {
+                                    name: true,
+                                },
+                            },
                         },
                     },
                 },
@@ -90,11 +101,15 @@ export class OrderService {
                 },
                 products: {
                     select: {
-                        id: true,
-                        name: true,
-                        price: true,
-                        image: true,
-                        description: true,
+                        products: {
+                            select: {
+                                id: true,
+                                name: true,
+                                price: true,
+                                image: true,
+                                description: true,
+                            },
+                        },
                     },
                 },
             },
