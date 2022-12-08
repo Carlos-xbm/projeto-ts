@@ -42,7 +42,6 @@ model User {
   nickname        String @unique
   name            String
   password        String
-  confirmPassword String
   image           String
 
   createdAt DateTime @default(now()) @map("created_at")
