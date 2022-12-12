@@ -5,14 +5,14 @@ export class CreateProductDto {
     @IsString()
     @ApiProperty({
         description: 'Nome do Produto',
-        example: 'Pizza de mussarela',
+        example: 'Pizza de Mussarela',
     })
     name: string;
 
     @IsString()
     @ApiProperty({
         description: 'Descrição do Produto',
-        example: 'Calabresa & mussarela com borda recheada',
+        example: 'Mussarela com borda recheada',
     })
     description: string;
 
