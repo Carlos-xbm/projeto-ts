@@ -3,6 +3,7 @@ export class User {
     nickname: string;
     name: string;
     password: string;
+    cpf: string;
     image: string;
     createdAt?: Date;
     updatedAt?: Date;

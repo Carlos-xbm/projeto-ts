@@ -27,9 +27,9 @@ async function bootstrap() {
         .setVersion('1.0.0')
         .addTag('status')
         .addTag('auth')
+        .addTag('user')
         .addTag('table')
         .addTag('product')
-        .addTag('user')
         .addTag('order')
         .addBearerAuth()
         .build();
@@ -39,6 +39,6 @@ async function bootstrap() {
 
     await app.listen(process.env.PORT || 3333);
 
-    // console.log('http://localhost:3333/api');
+    console.log('http://localhost:3333/api');
 }
 bootstrap();

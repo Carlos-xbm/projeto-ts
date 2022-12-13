@@ -6,6 +6,7 @@ export const users: Prisma.UserCreateInput[] = [
         nickname: 'carlos-xbm',
         name: 'Carlos Eduardo Carvalho',
         password: 'Abcd@123',
+        cpf: '12345678910',
         image: 'http://www.pizzafresh.com/imagem-usuario',
     },
 ];
